@@ -1,34 +1,38 @@
-'''
+#!/usr/bin/env python3
+"""
 https://adventofcode.com/2020/day/1
-'''
+"""
 
-with open('./files/day_1.txt', 'r') as textinput:
-    expenses = textinput.readlines()
+with open('./files/day_1.txt', 'r') as text_input:
+    expenses = text_input.readlines()
 
-numbers = [int(line.strip()) for line in expenses]
+nums = [int(line.strip()) for line in expenses]
 
 
-def task1(list):
-    for number_1 in list:
-        number_2 = 2020 - number_1
-        if number_2 in list:
-            answer = number_1 * number_2
+def day1_1(num):
+    """Find the distinct numbers that sum to 2020, and return their product"""
+    for num_1 in num:
+        num_2 = 2020 - num_1
+        if num_2 in num:
+            answer = num_1 * num_2
             print(answer)
             break
 
-def task2(list):
-    for number_1 in list:
-        for number_2 in list:
-            for number_3 in list:
-                if number_1 + number_2 + number_3 == 2020:
-                    answer = number_1 * number_2 * number_3
+
+def day1_2(num):
+    """Find the distinct numbers that sum to 2020, and return their product"""
+    for num_1 in num:
+        for num_2 in num:
+            for num_3 in num:
+                if num_1 + num_2 + num_3 == 2020:
+                    answer = num_1 * num_2 * num_3
                     print(answer)
                     break
 
-task1(numbers)
-task2(numbers)
 
-'''
+day1_1(nums)
+day1_2(nums)
+"""
 Part one: Your puzzle answer was 969024.
 Part two: Your puzzle answer was 230057040.
-'''
+"""
