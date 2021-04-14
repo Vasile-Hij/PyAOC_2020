@@ -26,12 +26,14 @@ Other occurrences of the letter are irrelevant for the purposes of policy enforc
 
 with open('./files/day_2.txt', 'r') as f:
     passwords = f.read().splitlines()
+    f.close()
 
 total = len(passwords)
+valid = 0
 
 
 def day_2_part_1():
-    valid = 0
+    global valid
 
     for x in passwords:
         numbers, letter, valid_pass = x.split(" ")
@@ -47,7 +49,7 @@ def day_2_part_1():
 
 
 def day_2_part_2():
-    valid = 0
+    global valid
 
     for x in passwords:
         number, letter, valid_pass = x.split(' ')
