@@ -37,6 +37,7 @@ def guidance_2_map():
     num_tree = math.prod([guidance_1_map(dx, dy) for dx, dy in slopes])
     return num_tree
 
+
 def main():
     # print(f'Trees: %d' % guidance_1_map())
     print(f'Part 1: %d' % guidance_1_map(3, 1))
@@ -49,4 +50,4 @@ if __name__ == '__main__':
 """
 Part 1: 247
 Part 2: 2983070376
-"      ""
+"""
