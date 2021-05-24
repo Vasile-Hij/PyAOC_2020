@@ -44,8 +44,14 @@ keys_part_2 = {
 
 def separator_passport_part_1():
     """Looping all over the keys in a nested list comprehension"""
-    valid_keys = sum([all([k in p for k in keys_part_1]) for p in passports])
-    return valid_keys
+   #valid_keys = sum([all([k in p for k in keys_part_1]) for p in passports])
+    #return valid_keys
+
+    valid_keys = 0
+    for p in passports:
+        if p in keys_part_1:
+            s = sum(valid_keys)
+            return s
 
 
 def valid_passport_part_2():
